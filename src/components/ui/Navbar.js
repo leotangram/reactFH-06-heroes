@@ -19,7 +19,6 @@ const Navbar = props => {
           >
             Marvel
           </NavLink>
-
           <NavLink
             activeClassName="active"
             className="nav-item nav-link"
@@ -27,6 +26,14 @@ const Navbar = props => {
             to="/dc"
           >
             DC
+          </NavLink>
+          <NavLink
+            activeClassName="active"
+            className="nav-item nav-link"
+            exact
+            to="/search"
+          >
+            Search
           </NavLink>
         </div>
       </div>
