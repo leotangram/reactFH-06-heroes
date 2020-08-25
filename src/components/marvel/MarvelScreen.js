@@ -1,8 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import HeroList from '../heroes/HeroList'
 
-const MarvelScreen = props => {
+const MarvelScreen = () => {
   return (
     <div>
       <h2>MarvelScreen</h2>
@@ -11,7 +10,5 @@ const MarvelScreen = props => {
     </div>
   )
 }
-
-MarvelScreen.propTypes = {}
 
 export default MarvelScreen
