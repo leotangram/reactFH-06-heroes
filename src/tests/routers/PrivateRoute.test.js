@@ -25,4 +25,18 @@ describe('<PrivateRoute />', () => {
     expect(wrapper.find('span').exists()).toBe(true)
     expect(localStorage.setItem).toHaveBeenCalledWith('lastPath', '/')
   })
+
+  test('should block the component if it is not authenticated', () => {
+    const wrapper = mount(
+      <MemoryRouter>
+        <PrivateRoute
+          isAuthenticated={false}
+          component={() => <span>Auntenticado!</span>}
+          {...props}
+        />
+      </MemoryRouter>
+    )
+    expect(wrapper.find('span').exists()).toBe(false)
+    expect(localStorage.setItem).toHaveBeenCalledWith('lastPath', '/')
+  })
 })
