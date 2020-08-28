@@ -10,6 +10,8 @@ describe('<PrivateRoute />', () => {
     }
   }
 
+  Storage.prototype.setItem = jest.fn()
+
   test('should show <PrivateRoute /> if the user is authenticated & save localStorage', () => {
     const wrapper = mount(
       <MemoryRouter>
@@ -21,5 +23,6 @@ describe('<PrivateRoute />', () => {
       </MemoryRouter>
     )
     expect(wrapper.find('span').exists()).toBe(true)
+    expect(localStorage.setItem).toHaveBeenCalledWith('lastPath', '/')
   })
 })
