@@ -53,6 +53,60 @@ exports[`<SearchScreen /> should be displayed correctly 1`] = `
 </div>
 `;
 
+exports[`<SearchScreen /> should displayed error if not exists the hero 1`] = `
+<div>
+  <h2>
+    SearchScreen
+  </h2>
+  <hr />
+  <div
+    className="row"
+  >
+    <div
+      className="col-5"
+    >
+      <h4>
+        Search form
+      </h4>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control"
+          name="searchText"
+          onChange={[Function]}
+          placeholder="Find your hero"
+          type="text"
+          value="batman123"
+        />
+        <button
+          className="btn m-1 btn-block btn-outline-primary"
+          type="submit"
+        >
+          Search...
+        </button>
+      </form>
+    </div>
+    <div
+      className="col-7"
+    >
+      <h4>
+        Results
+      </h4>
+      <hr />
+      <div
+        className="alert alert-danger"
+      >
+        There is not a hero with 
+        batman123
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<SearchScreen /> should displayed to Batman & input with queryString 1`] = `
 <div>
   <h2>
